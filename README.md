@@ -30,6 +30,8 @@ docker run --name kibana-workshop --link elasticsearch-workshop-node:elasticsear
 You can use whatever you want but using **Kibana Dev Tools** is pretty handy for our case because it has powerful intellisense.
 
 ### Kibana Dev Tools
+To get started, open the menu, go to **Dev Tools**, then click **Console**.
+![Kibana Dev Tools](https://www.elastic.co/guide/en/kibana/current/dev-tools/console/images/console.png)
 ### Postman
 ### Insomnia
 ### Browser
