@@ -6,13 +6,14 @@
 4. Playground is ready so go to play.
 
 ## Task todo
-1. Get all posts with Pinterest or Tiktok network (1893)
-1. Get all posts which has some attachments (4952)
-    * Get posts with link attachments (3242)
-    * Get posts with video & photo attachments (4452)
-    * Get posts with only link attachments (500)
-    * Get posts with only video or photo attachments (1710)
-1. Get posts with date `2020-06-02` (9)
+1. Get all posts with Pinterest or Tiktok network. (1893)
+1. Get all posts which has some attachments. (4952)
+    * Get posts with link attachments. (3242)
+    * Get posts with video & photo attachments. (4452)
+    * Get posts with only link attachments. (500)
+    * Get posts with only video or photo attachments. (1710)
+1. Get posts with date `2020-06-02`. (9)
+1. Get posts with text `lorem` in message field. (326)
 1. ...
 
 ## Usefull commands
