@@ -1,0 +1,15 @@
+{
+  "name": "lesson-0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "migrate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "node migrate.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "elasticsearch": "^16.7.1"
+  }
+}

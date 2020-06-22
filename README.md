@@ -25,19 +25,14 @@ docker pull docker.elastic.co/kibana/kibana:7.7.1
 docker run --name kibana-workshop --link elasticsearch-workshop-node:elasticsearch -p 5601:5601 docker.elastic.co/kibana/kibana:7.7.1
 ```
 3. Verify Kibana is running by opening this link [http://localhost:5601/](http://localhost:5601/).
-## Populating script
 
 ## Tools to use
+You can use whatever you want but using **Kibana Dev Tools** is pretty handy for our case because it has powerful intellisense.
 
-### Postman
 ### Kibana Dev Tools
-#### Sample commands
-```
-GET /_cluster/health
-
-GET /_cat/nodes?v
-
-GET /_cat/indices?v
-```
+To get started, open the menu, go to **Dev Tools**, then click **Console**.
+![Kibana Dev Tools](assets/kibana-console.png?raw=true)
+### Postman
 ### Insomnia
 ### Browser
+
