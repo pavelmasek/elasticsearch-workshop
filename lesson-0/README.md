@@ -1,7 +1,7 @@
 # Lesson zero
 
-1. Follow steps [from](../) about environment preparation.
-2. Make sure everything is up & running.
+1. Follow steps [from](../) about environment preparation & Make sure everything is up & running.
+2. Run command `npm i`.
 3. Run command `npm start migrate`. This will populate your local database with sample data.
 4. Playground is ready so go to play.
 
