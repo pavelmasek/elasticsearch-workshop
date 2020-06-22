@@ -31,7 +31,7 @@ You can use whatever you want but using **Kibana Dev Tools** is pretty handy for
 
 ### Kibana Dev Tools
 To get started, open the menu, go to **Dev Tools**, then click **Console**.
-![Kibana Dev Tools](../assets/kibana-console.png?raw=true)
+![Kibana Dev Tools](assets/kibana-console.png?raw=true)
 ### Postman
 ### Insomnia
 ### Browser
