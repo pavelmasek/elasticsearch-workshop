@@ -1,0 +1,120 @@
+{
+  "mappings": {
+    "properties": {
+      "post_id": {
+        "type": "keyword"
+      },
+      "created_time": {
+        "type": "date"
+      },
+      "content_post": {
+        "type": "keyword"
+      },
+      "profile_id": {
+        "type": "keyword"
+      },
+      "attachment_types": {
+        "type": "keyword"
+      },
+      "content_type": {
+        "type": "keyword"
+      },
+      "created": {
+        "properties": {
+          "account_id": {
+            "type": "keyword"
+          },
+          "user_id": {
+            "type": "keyword"
+          }
+        }
+      },
+      "accounts": {
+        "type": "nested",
+        "properties": {
+          "account_id": {
+            "type": "keyword"
+          },
+          "label": {
+            "properties": {
+              "ids": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "user_actions": {
+        "type": "nested",
+        "properties": {
+          "account_id": {
+            "type": "keyword"
+          },
+          "user_id": {
+            "type": "keyword"
+          },
+          "created_time": {
+            "type": "date"
+          },
+          "types": {
+            "type": "keyword"
+          }
+        }
+      },
+      "fulltext": {
+        "type": "text",
+        "analyzer": "fulltext_analyzer"
+      },
+      "author_ids": {
+        "type": "keyword"
+      },
+      "labels": {
+        "type": "keyword"
+      },
+      "networks": {
+        "type": "keyword"
+      },
+      "parent_id": {
+        "type": "keyword"
+      },
+      "root_id": {
+        "type": "keyword"
+      },
+      "thread": {
+        "properties": {
+          "level": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "keyword"
+          }
+        }
+      },
+      "data": {
+        "type": "object",
+        "enabled": false
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "refresh_interval": "1s",
+      "number_of_shards": "1",
+      "number_of_replicas": "0"
+    },
+    "analysis": {
+      "analyzer": {
+        "fulltext_analyzer": {
+          "filter": [
+            "lowercase"
+          ],
+          "char_filter": [
+            "html_strip"
+          ],
+          "type": "custom",
+          "tokenizer": "standard"
+        }
+      }
+    }
+  }
+}
