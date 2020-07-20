@@ -1,16 +1,13 @@
 {
   "mappings": {
     "properties": {
-      "post_id": {
+      "id": {
         "type": "keyword"
       },
       "created_time": {
         "type": "date"
       },
-      "content_post": {
-        "type": "keyword"
-      },
-      "profile_id": {
+      "profile_ids": {
         "type": "keyword"
       },
       "attachment_types": {
@@ -68,9 +65,6 @@
       "author_ids": {
         "type": "keyword"
       },
-      "labels": {
-        "type": "keyword"
-      },
       "networks": {
         "type": "keyword"
       },
@@ -105,12 +99,8 @@
     "analysis": {
       "analyzer": {
         "fulltext_analyzer": {
-          "filter": [
-            "lowercase"
-          ],
-          "char_filter": [
-            "html_strip"
-          ],
+          "filter": ["lowercase"],
+          "char_filter": ["html_strip"],
           "type": "custom",
           "tokenizer": "standard"
         }
