@@ -1,0 +1,73 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "message": {
+        "type": "text",
+        "analyzer": "fulltext_analyzer"
+      },
+      "attachments": {
+        "type": "nested",
+        "properties": {
+          "type": {
+            "type": "keyword"
+          },
+          "link": {
+            "type": "keyword"
+          }
+        }
+      },
+      "network": {
+        "type": "keyword"
+      },
+      "content_status": {
+        "type": "keyword"
+      },
+      "isAdd": {
+        "type": "boolean"
+      },
+      "date": {
+        "type": "date"
+      },
+      "statuses": {
+        "type": "keyword"
+      },
+      "profile_id_raw": {
+        "type": "keyword"
+      },
+      "profile_id": {
+        "type": "keyword"
+      },
+      "mentions": {
+        "type": "nested",
+        "properties": {
+          "type": {
+            "type": "keyword"
+          },
+          "name": {
+            "type": "text"
+          }
+        }
+      }
+    }
+  },
+  "settings": {
+    "index": {
+      "refresh_interval": "1s",
+      "number_of_shards": "1",
+      "number_of_replicas": "0"
+    },
+    "analysis": {
+      "analyzer": {
+        "fulltext_analyzer": {
+          "filter": ["lowercase"],
+          "char_filter": ["html_strip"],
+          "type": "custom",
+          "tokenizer": "standard"
+        }
+      }
+    }
+  }
+}
