@@ -5,7 +5,7 @@
 ### Install Docker
 Install stable version of Docker Desktop for Mac [link](https://hub.docker.com/editions/community/docker-ce-desktop-mac/)
 
-### Use docker compose (highly recommended)
+### Use docker compose
 1. Install & setup Elasticsearch image & Kibana image 
 ```
 docker-compose up
