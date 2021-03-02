@@ -14,7 +14,7 @@ async function run () {
       body: mapping,
     }, { ignore: [400] })
 
-    const body = dataset.flatMap(doc => [{ index: { _index: indexName } }, doc])
+    const body = dataset.flatMap(doc => [{ index: { _index: indexName, _id: doc.id } }, doc])
 
     const bulkResponse = await client.bulk({ refresh: true, body })
 
