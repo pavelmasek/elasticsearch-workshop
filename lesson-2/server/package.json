@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "populate-db": "node ./scripts/populate.js",
+    "export-db": "node ./scripts/export.js",
+    "clean-db": "node ./scripts/clean.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.17.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "socket.io": "^4.4.1"
+  }
+}

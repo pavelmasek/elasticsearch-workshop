@@ -1,0 +1,65 @@
+.profileInfo {
+	display: flex;
+}
+
+.profileInfoName {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.profileImage {
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+	object-fit: contain;
+}
+
+.networkTag {
+	font-weight: bold;
+	color: white;
+	font-size: 11px;
+	margin-right: 2px;
+}
+.networkTag:after {
+	padding: 1px 4px;
+}
+
+.facebook:after {
+	content: 'fb';
+	background-color: #1877f2;
+}
+
+.instagram:after {
+	content: 'ig';
+	background-color: #d73676;
+}
+
+.twitter:after {
+	content: 'tw';
+	background-color: #59adeb;
+}
+
+.linkedin:after {
+	content: 'li';
+	background-color: #1078b3;
+}
+
+.youtube:after {
+	content: 'yt';
+	background-color: #ff0000;
+}
+
+.networkUrl {
+	display: flex;
+	align-items: center;
+}
+
+.profileUrl {
+	font-size: 11px;
+}
+
+.profileNameUrl {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
