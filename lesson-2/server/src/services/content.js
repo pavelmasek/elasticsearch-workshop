@@ -5,6 +5,13 @@ router.post('/create', async (req, res) => {
 	const client = req.app.get('esClient')
 	const {feedUpdate} = req.app.get('feedService')
 	// <Task1: Create a new document in the content index>
+	const newPost = await client.index({
+		index: process.env.POSTS_INDEX,
+		body: {
+			...req.body,
+		},
+	})
+	// </Task1>
 
 router.put('/update', async (req, res) => {
 	const client = req.app.get('esClient')
