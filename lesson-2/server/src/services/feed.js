@@ -41,7 +41,7 @@ module.exports = function (app) {
 			// <Task7: Create percolation cleaner logic>
 			// but do it better :troll_face:
 			await esClient.delete({
-				index: 'posts-percolations-v4',
+				index: process.env.PERCOLATE_INDEX,
 				id: data.feedId,
 			})
 			// </Task7>

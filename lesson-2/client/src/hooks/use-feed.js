@@ -67,7 +67,7 @@ export function useFeedUpdate(feedIdRef) {
 				}
 			})
 		})
-	}, [filters, queryClient])
+	}, [filters, queryClient, feedIdRef.current])
 }
 
 export function useFeedLoadMore({feedIdRef, data}) {
