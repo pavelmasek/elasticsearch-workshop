@@ -5,6 +5,9 @@ router.post('/create', async (req, res) => {
 	const client = req.app.get('esClient')
 	const {feedUpdate} = req.app.get('feedService')
 	// <Task1: Create a new document in the content index>
+	// </Task1>
+	res.send({status: 'cajk'})
+})
 
 router.put('/update', async (req, res) => {
 	const client = req.app.get('esClient')
