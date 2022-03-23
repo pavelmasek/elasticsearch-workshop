@@ -1,0 +1,40 @@
+.feed {
+	display: flex;
+	justify-content: center;
+}
+
+.feedContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-width: 520px;
+	padding: 10px;
+}
+.feedFilter {
+	padding: 10px;
+}
+
+.networkFilter {
+}
+
+.networkFilterButton {
+	font-weight: bold;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.publishTime {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.actionButtons {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}

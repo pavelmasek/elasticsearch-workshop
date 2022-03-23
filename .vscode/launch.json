@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "name": "Lesson 2 - server",
+            "program": "./lesson-2/server/index.js",
+            "request": "launch",
+            "restart": true,
+            "runtimeExecutable": "nodemon",
+        }
+    ]
+}

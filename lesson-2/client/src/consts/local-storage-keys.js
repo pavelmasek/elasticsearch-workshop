@@ -1,0 +1,5 @@
+const LOCAL_STORAGE_KEYS = {
+	FEED_FILTERS_LOCAL_STORAGE_KEY: 'feed-filters',
+}
+
+export default LOCAL_STORAGE_KEYS

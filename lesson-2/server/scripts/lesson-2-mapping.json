@@ -1,0 +1,41 @@
+{
+    "mappings": {
+        "dynamic": false,
+        "properties": {
+          "message": {
+            "type": "text",
+            "analyzer": "fulltext_analyzer"
+          },
+          "network": {
+            "type": "keyword"
+          },
+          "labels": {
+            "type": "keyword"
+          },
+          "profile": {
+            "type": "keyword"
+          },
+          "publish_time": {
+            "type": "date"
+          }
+        }
+      },
+    "settings": {
+      "index": {
+        "refresh_interval": "1s",
+        "number_of_shards": "1",
+        "number_of_replicas": "0"
+      },
+      "analysis": {
+        "analyzer": {
+          "fulltext_analyzer": {
+            "filter": ["lowercase"],
+            "char_filter": ["html_strip"],
+            "type": "custom",
+            "tokenizer": "standard"
+          }
+        }
+      }
+    }
+  }
+  
