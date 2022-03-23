@@ -15,14 +15,14 @@ module.exports = function (app) {
 			if (data.action !== 'load-more') {
 				// <Task4: Register percolator and send update>
 				//<Task5: Receive updates only for visible content>
-				// await esClient.index({
-				// 	index: 'percolation index',
-				// 	id: 'document id - for our testing purposes should match the feed id',
-				// 	body: {
-				// 		feed_id: 'feed id',
-				// 		query: {...feed filters...},
-				// 	},
-				// })
+				await esClient.index({
+					index: process.env.PERCOLATE_INDEX,
+					id: data.feedId,
+					body: {
+						feed_id: data.feedId,
+						query,
+					},
+				})
 				//</Task5>
 				// </Task4>
 				socket.join(data.feedId)
@@ -50,13 +50,19 @@ module.exports = function (app) {
 
 	async function feedUpdate(action, {id}) {
 		// <Task4: Register percolator and send update>
-		// const percolationResults = await esClient.search({
-		// 	index: 'percolation index name',
-		// 	size: 1000,
-		// 	body: {
-		// 		...percolation query...
-		// 	},
-		// })
+		const percolationResults = await esClient.search({
+			index: process.env.PERCOLATE_INDEX,
+			size: 1000,
+			body: {
+				query: {
+					percolate: {
+						field: 'query',
+						index: process.env.POSTS_INDEX,
+						id,
+					},
+				},
+			},
+		})
 		// </Task4>
 		const hits = percolationResults.body.hits.hits
 		let update
