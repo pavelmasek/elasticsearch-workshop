@@ -19,13 +19,13 @@ router.put('/update', async (req, res) => {
 
 	const {id, ...rest} = req.body
 	// <Task2: Create a new document in the content index>
-	// await client.index({
-	// 	index: 'posts index name',
-	// 	id: 'post id',
-	// 	body: {
-	// 		...document content...,
-	// 	},
-	// })
+	await client.index({
+		index: process.env.POSTS_INDEX,
+		id: id,
+		body: {
+			...rest,
+		},
+	})
 	// </Task2>
 	// <Task4: Update the feed on altering content>
 	// await feedUpdate('update', {id})
