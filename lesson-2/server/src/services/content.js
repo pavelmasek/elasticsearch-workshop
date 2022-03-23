@@ -40,10 +40,10 @@ router.delete('/delete/:id', async (req, res) => {
 	// await feedUpdate('remove', {id: req.params.id})
 	// </Task4>
 	// <Task3: Create a new document in the content index>
-	// await client.delete({
-	// 	index: 'posts index name',
-	// 	id: 'post id',
-	// })
+	await client.delete({
+		index: process.env.POSTS_INDEX,
+		id: req.params.id,
+	})
 	// </Task3>
 	res.send({status: 'cajk'})
 })
