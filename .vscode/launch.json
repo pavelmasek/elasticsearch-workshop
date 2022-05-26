@@ -10,6 +10,7 @@
             "request": "launch",
             "restart": true,
             "runtimeExecutable": "nodemon",
+            "envFile": "${workspaceFolder}/lesson-2/server/.env"
         }
     ]
 }
